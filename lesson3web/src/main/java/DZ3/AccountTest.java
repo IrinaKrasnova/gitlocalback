@@ -8,9 +8,8 @@ import static io.restassured.RestAssured.given;
 public class AccountTest extends BaseTest {
     @Test
     public void  getAccountInfoTest(){
-        given()
-                .headers("Authorisation",token)
-                .when()
+        given(requestSpecificationWithAuth,positiveResponseSpecification)
+       //         .headers("Authorisation",token)
                 .get("https://api.imgur.com/3/account/{username}", username)
                 .then()
                 .statusCode(200);
@@ -18,13 +17,13 @@ public class AccountTest extends BaseTest {
 
     @Test
     public void  getAccountInfoTestWithLoggingTest() {
-        given()
-                .headers("Authorisation", "Bearer d07c2245276fe0af3a41709640e9347fd380a9ee")
-                .log()
-                .method()
-                .log()
-                .uri()
-                .when()
+        given(requestSpecificationWithAuth,positiveResponseSpecification)
+               // .headers("Authorisation", "Bearer d07c2245276fe0af3a41709640e9347fd380a9ee")
+               // .log()
+               // .method()
+                //.log()
+                //.uri()
+               // .when()
                 .get("https://api.imgur.com/3/account/Test13")
                 .prettyPeek()
                 .then()

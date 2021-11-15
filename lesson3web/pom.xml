@@ -34,6 +34,7 @@
     <aspectj.version>1.9.5</aspectj.version>
     <reportVersion.version>2.4.1</reportVersion.version>
     <slf4j-simple.version>1.7.30</slf4j-simple.version>
+    <jackson.version>2.13.0 </jackson.version>
 </properties>
 <dependencies>
     <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit5 -->
@@ -147,6 +148,34 @@
         <version>RELEASE</version>
         <scope>compile</scope>
     </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.22</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>javax.annotation</groupId>
+        <artifactId>javax.annotation-api</artifactId>
+        <version>1.3.2</version>
+    </dependency>
+
+
 
 </dependencies>
 
